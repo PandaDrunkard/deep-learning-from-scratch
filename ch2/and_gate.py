@@ -10,7 +10,14 @@ def AND(x1, x2):
     else:
         return 1
 
-print(AND(0,0))
-print(AND(1,0))
-print(AND(0,1))
-print(AND(1,1))
+m = [
+    [0, 0],
+    [1, 0],
+    [0, 1],
+    [1, 1]
+]
+
+for x in m:
+    x1 = x[0]
+    x2 = x[1]
+    print("{0} AND {1} is {2}".format(x1, x2, AND(x1, x2)))
