@@ -1,5 +1,6 @@
 import numpy as np
 from sigmoid_func import sigmoid
+from softmax_func import softmax
 
 def init_network():
     network = {}
@@ -51,7 +52,7 @@ def forward(network, X):
     print(Z2)
 
     A3 = np.dot(Z2, W3) + B3
-    Y = identity_func(A3)
+    Y = softmax(A3)
 
     print(A3)
 
