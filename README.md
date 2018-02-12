@@ -13,4 +13,10 @@
     - ``virtualenv/lib/python3.6/site-packages/matplotlib/mpl-data/`` の ``backend`` を ``Tkagg`` に変更した
 
 
+## 2018/02/12
 
+### 3.6 手書き数字認識
+
+- PIL モジュールのインストールを行った
+    - https://qiita.com/uehatsu/items/e576e58345bba0219866
+    - 新幹線のWIFIだと接続タイムアウトが発生してダウンロードできず
