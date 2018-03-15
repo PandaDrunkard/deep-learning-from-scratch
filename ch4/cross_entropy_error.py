@@ -20,4 +20,4 @@ def test_cross_entropy_error():
     d = cross_entropy_error(y, t)
     print(d)
 
-test_cross_entropy_error()
+# test_cross_entropy_error()
