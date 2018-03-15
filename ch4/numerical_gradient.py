@@ -1,7 +1,5 @@
 import numpy as np
-
-def function_2(x):
-    return x[0]**2 + x[1]**2
+from function_2 import function_2
 
 def numerical_gradient(f, x):
     h = 1e-4
@@ -29,4 +27,4 @@ def text_grad():
 
     return g
 
-print(text_grad())
+# print(text_grad())
