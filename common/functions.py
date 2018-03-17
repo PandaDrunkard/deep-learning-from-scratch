@@ -7,18 +7,18 @@ def sigmoid_grad(x):
     return (1.0 - sigmoid(x)) * sigmoid(x)
 
 def softmax(x):
-    if X.ndim == 2:
+    if x.ndim == 2:
         return softmax_2D(x)
     else:
         return softmax_1D(x)
 
-def softmax_1D(X):
-    c = np.max(X)
-    exp_a = np.exp(X - c) # avoid overflow
+def softmax_1D(x):
+    c = np.max(x)
+    exp_a = np.exp(x - c) # avoid overflow
     sum_exp_a = np.sum(exp_a)
-    Y = exp_a / sum_exp_a
+    y = exp_a / sum_exp_a
 
-    return Y
+    return y
 
 def softmax_2D(x):
     x = x.T
