@@ -19,3 +19,13 @@ s_dx = sigmoid_layer.backward(s_out)
 
 print(s_out)
 print(s_dx)
+
+W = np.random.randn(2,10)
+b = np.random.randn(2,1)
+
+affine_layer = Affine(W, b)
+affine_fw = affine_layer.forward(x)
+affine_bw = affine_layer.backward(affine_fw)
+
+print(affine_fw)
+print(affine_bw)
