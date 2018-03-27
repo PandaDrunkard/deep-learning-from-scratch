@@ -2,7 +2,7 @@ import sys, os
 sys.path.append(os.pardir)
 import numpy as np
 from common.networks import TwoLayerNet
-from common.optimizers import SGD, Momentum
+from common.optimizers import SGD, Momentum, AddGrad, RMSprop, Adam
 from dataset.mnist import load_mnist
 import matplotlib.pyplot as plt
 
@@ -21,6 +21,10 @@ class TestEntity():
 optimizers = {}
 optimizers['SGD'] = TestEntity(TwoLayerNet(input_size=784, hidden_size=50, output_size=10), SGD())
 optimizers['Momentum'] = TestEntity(TwoLayerNet(input_size=784, hidden_size=50, output_size=10), Momentum())
+optimizers['AddGrad'] = TestEntity(TwoLayerNet(input_size=784, hidden_size=50, output_size=10), AddGrad())
+optimizers['RMSprop'] = TestEntity(TwoLayerNet(input_size=784, hidden_size=50, output_size=10), RMSprop())
+optimizers['Adam'] = TestEntity(TwoLayerNet(input_size=784, hidden_size=50, output_size=10), Adam())
+
 
 iters_num = 10000
 train_size = x_train.shape[0]
