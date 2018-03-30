@@ -1,6 +1,6 @@
 import numpy as np
-from functions import softmax, cross_entropy_error
-from util import im2col, col2im
+from common.functions import softmax, cross_entropy_error
+from common.util import im2col, col2im
 
 class MulLayer:
     def __init__(self):
@@ -105,7 +105,12 @@ class SoftmaxWithLoss:
 
     def backward(self, dout=1):
         batch_size = self.t.shape[0]
-        dx = (self.y - self.t) / batch_size
+        if self.t.size == self.y.size:
+            dx = (self.y - self.t) / batch_size
+        else:
+            dx = self.y.copy()
+            dx[np.arange(batch_size), self.t] -= 1
+            dx = dx / batch_size
 
         return dx
 
