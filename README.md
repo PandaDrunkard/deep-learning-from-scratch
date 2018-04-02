@@ -10,7 +10,7 @@
 - virtualenv の環境に matplotlib を入れたら、ランタイムエラーが発生した
     - [Python 3.3でmatplitlibとpylabを使おうとしたら RuntimeError: Python is not installed as a frameworkというエラーが発生したときの解決方法 - Qiita](https://qiita.com/katryo/items/918667f28301fdec89ba)
     - [pyenvとvirtualenvで環境構築した時にmatplotlib.pyplotが使えなかった時の対処法 - Qiita](https://qiita.com/Kodaira_/items/1a3b801c7a5a41c9ce49)
-    - ``virtualenv/lib/python3.6/site-packages/matplotlib/mpl-data/`` の ``backend`` を ``Tkagg`` に変更した
+    - ``virtualenv/lib/python3.6/site-packages/matplotlib/mpl-data/matplotlibrc`` の ``backend`` を ``Tkagg`` に変更した
 
 
 ## 2018/02/12
